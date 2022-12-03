@@ -8,7 +8,9 @@ const HeaderSearchBar = () => {
         <div className="HeaderSearchBar">
             <input type="text" name="search" id="search" placeholder='Search a pokemon' />
             <div className="searchIconBox">
-                <img src={searchIcon} alt="searchIcon" className="searchIcon" />
+                <span className="material-symbols-outlined">
+                    search
+                </span>
             </div>
         </div>
     )

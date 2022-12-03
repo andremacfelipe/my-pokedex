@@ -1,13 +1,18 @@
 ::placeholder{
-    color:rgba(0, 0, 0, 0.3);
+    color:rgba(0, 0, 0, 0.5);
 }
 
 .HeaderSearchBar{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:rgba(255, 255, 255, 0.2);
+    /* background-color:rgba(255, 255, 255, 0.2); */
     border-radius: 10px;
+}
+.HeaderSearchBar:focus-within{
+    /* outline:1px solid #f2d20042; */
+    /* outline:2px solid #ee721a; */
+    background-color:rgba(255, 255, 255, 0.2);
 }
 
 
@@ -35,6 +40,11 @@
     
 }
 
-.HeaderSearchBar .searchIcon{
-    height: 36px;
+.HeaderSearchBar .searchIconBox span{
+    color:white;
+    font-size: 2rem;
 }
+
+/* .HeaderSearchBar .searchIcon{
+    height: 36px;
+} */
