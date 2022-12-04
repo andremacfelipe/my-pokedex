@@ -1,6 +1,6 @@
 import './style.css'
 
-import searchIcon from "../../assets/icons/searchIcon.png"
+// import searchIcon from "../../assets/icons/searchIcon.png"
 
 const HeaderSearchBar = () => {
 
