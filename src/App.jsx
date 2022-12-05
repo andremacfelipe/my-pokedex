@@ -1,17 +1,27 @@
 
 import './App.css';
 import Header from './components/Header/Header';
-import PokemonCard from './components/PokemonCard/PokemonCard';
+import Content from './components/Content/Content';
 
+import { getDataFromPokemons,getSimplifyedPokemonData } from './services/fetchPokemon/fetchPokemonClient';
 
 
 function App() {
+
+
+    const temp = async () => {
+        const data = await getSimplifyedPokemonData()
+        console.log(data)
+    }
+    temp()
+
+
   return (
     <div className="App">
         <Header />
     
         <main>
-            <PokemonCard />
+            <Content />
         </main>
     </div>
   );

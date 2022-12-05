@@ -10,6 +10,8 @@
   flex-direction: column;
   /* background-color: #e78f0124; */
   background-color: aliceblue;
+  /* align-items: flex-end; */
+  align-items: center;
     
 
 
@@ -19,9 +21,13 @@ main{
     overflow-y: auto;
     display:flex;
     height: calc(100vh - 2px);
-    flex-direction: column;
+    /* flex-direction: column; */
     /* background-color: #e78f0124; */
+    flex-wrap: wrap;
     background-color: aliceblue;
     padding:10px;
+    justify-content: space-evenly;
+    /* max-width: 900px; */
     
 }
+/*  */
