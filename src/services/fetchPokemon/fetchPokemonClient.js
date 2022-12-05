@@ -4,7 +4,7 @@ const fetchAllPokemons = async () => {
     const FETCH_ALL_DEFAULT_ERROR_MESSAGE = "Fetch all pokemons error"
 
     //Fetch the first 24 pokemons
-    const FETCH_POKEMON_URL = "https://pokeapi.co/api/v2/pokemon/?limit=24&offset=0"
+    const FETCH_POKEMON_URL = "https://pokeapi.co/api/v2/pokemon/?limit=50&offset=0"
     
     const fetchResponse = await fetch(FETCH_POKEMON_URL)
     
@@ -33,15 +33,16 @@ const getSimplifyedPokemonData = async () => {
 
 
     const {results} = await fetchAllPokemons()
-    const simplifyedPokemonData = {}
+    const simplifyedPokemonData = []
 
     results.forEach(async (element) => {
-        const pokemonName = element.name
+        // const pokemonName = element.name
         const pokemonUrl = element.url
 
         const thisPokemonData = await fetch(pokemonUrl).then(res => res.json())
 
-        simplifyedPokemonData[pokemonName] = {
+        await simplifyedPokemonData.push({
+            pokemonName:thisPokemonData.name,
             pokemonId:thisPokemonData.id,
             pokemonHeight:thisPokemonData.height,
             pokemonWeight:thisPokemonData.weight,
@@ -53,7 +54,7 @@ const getSimplifyedPokemonData = async () => {
             pokemonBaseSpeed:thisPokemonData.stats[5].base_stat            
 
 
-        }
+        })
     })
 
     return simplifyedPokemonData
