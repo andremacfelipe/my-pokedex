@@ -9,7 +9,7 @@ const Content = () => {
 
     const {allPokemons,loading,setLoading} = useContext(ShowContext)
     
-    console.log(allPokemons)
+    // console.log(allPokemons)
 
 
     return(

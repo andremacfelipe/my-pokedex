@@ -7,6 +7,11 @@ import { getSimplifyedPokemonData } from './services/fetchPokemon/fetchPokemonCl
 
 import { ShowContextProvider } from './contexts/ShowContext';
 
+// import useAllPokemonsUrl from './services/Hooks/PokemonData/useAllPokemonsUrl';
+
+import useSlicePokemonData from './services/Hooks/PokemonData/useSlicePokemonData';
+
+import { useEffect } from 'react';
 
 function App() {
 
@@ -16,6 +21,18 @@ function App() {
     //     console.log(data)
     // }
     // temp()
+
+    // const {allPokemonsUrl} = useAllPokemonsUrl()
+
+    // useEffect(() => {
+    //     console.log(allPokemonsUrl)
+    // },[allPokemonsUrl])
+
+    // const {slicedPokemonData} = useSlicePokemonData()
+
+    // useEffect(() => {
+    //     console.log(slicedPokemonData)
+    // },[slicedPokemonData])
     
 
   return (
