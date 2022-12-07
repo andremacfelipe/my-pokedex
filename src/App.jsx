@@ -6,6 +6,7 @@ import Content from './components/Content/Content';
 import { getSimplifyedPokemonData } from './services/fetchPokemon/fetchPokemonClient';
 
 import { ShowContextProvider } from './contexts/ShowContext';
+import { AllPokemonsProvider } from './contexts/AllPokemonsContext';
 
 // import useAllPokemonsUrl from './services/Hooks/PokemonData/useAllPokemonsUrl';
 
@@ -39,11 +40,11 @@ function App() {
     <div className="App">
         
         <Header />
-        <ShowContextProvider>
+        <AllPokemonsProvider>
             <main>
                 <Content />
             </main>
-        </ShowContextProvider>
+        </AllPokemonsProvider>
     </div>
   );
 }

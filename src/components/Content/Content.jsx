@@ -3,19 +3,20 @@ import { useContext } from "react"
 import PokemonCard from "../PokemonCard/PokemonCard"
 import Loading from "../Loading/Loading"
 
-import ShowContext from "../../contexts/ShowContext"
+import AllPokemonsContext from "../../contexts/AllPokemonsContext"
+
+
 
 const Content = () => {
 
-    const {allPokemons,loading,setLoading} = useContext(ShowContext)
+    const {slicedPokemonData} = useContext(AllPokemonsContext)
     
     // console.log(allPokemons)
 
 
     return(
         <>
-            {loading && <Loading/>}
-            {!loading && allPokemons.map((pokemon) => {
+            {slicedPokemonData?.map((pokemon) => {
             return (
                 <PokemonCard 
                 pokemon={pokemon}
