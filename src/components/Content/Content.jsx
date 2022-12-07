@@ -10,8 +10,6 @@ import AllPokemonsContext from "../../contexts/AllPokemonsContext"
 const Content = () => {
 
     const {slicedPokemonData} = useContext(AllPokemonsContext)
-    
-    // console.log(allPokemons)
 
 
     return(

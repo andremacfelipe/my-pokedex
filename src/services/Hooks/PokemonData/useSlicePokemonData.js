@@ -5,7 +5,7 @@ const useSlicePokemonData = () => {
 
     const {allPokemonsUrl} = useAllPokemonsUrl()
     const [slicedPokemonData,setSlicedPokemonData] = useState([])
-    // const [isLoading,setIsLoading] = useState(true)
+    
 
     useEffect(() => {
 

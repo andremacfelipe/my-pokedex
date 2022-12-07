@@ -1,4 +1,4 @@
-import { useState,createContext,useEffect } from "react";
+import { createContext } from "react";
 
 import useSlicePokemonData from "../services/Hooks/PokemonData/useSlicePokemonData";
 
