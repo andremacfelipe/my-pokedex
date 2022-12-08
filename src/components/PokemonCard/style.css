@@ -12,7 +12,14 @@
     font-family: 'Turret Road';
     position: relative;
     margin-right:20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    transition: .3s;
+    cursor:pointer;
+
+}
+.PokemonCard:hover{
+    width: 205px;
+    height: 305px;
 
 }
 
@@ -35,10 +42,12 @@
     text-align: center;
 }
 .PokemonCard  .pokemonStats{
-    font-family: 'Press Start 2P';
-    font-size:8px;
+    /* font-family: 'Press Start 2P'; */
+    font-family: 'Turret Road';
+    font-size:16px;
+    font-weight: 500;
     position: absolute;
-    bottom: 30px;
+    bottom: 10px;
     left: 10px;
     /* margin-left:10px; */
     /* margin-bottom:30px; */
@@ -46,4 +55,7 @@
 }
 .PokemonCard .pokemonStats p{
     margin-bottom:6px;
+}
+.PokemonCard .pokemonCardInfo .pokemonStats .pokemonType{
+    display: flex;
 }

@@ -50,6 +50,7 @@ const PokemonCardIconImage = ({pokemonType}) => {
         <img src={PokemonCardTypesIcons[pokemonType]} 
         alt={pokemonType} 
         style={pokemonCardIconImageStyle} 
+        title={pokemonType}
         />
     )
 }

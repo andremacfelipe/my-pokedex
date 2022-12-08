@@ -17,9 +17,9 @@ const PokemonCard = ({pokemon}) => {
             <section className='pokemonCardInfo'>
                 <span className='pokemonName'>{pokemonName}</span>
                 <div className='pokemonStats' >
-                    <p className='pokemonHeight'>Height:{pokemonHeight}</p>
-                    <p className='pokemonWeight'>Weight:{pokemonWeight}</p>
-                    <p className='pokemonType'>Type:<PokemonCardIconImage pokemonType={pokemonType} /></p>
+                    <p className='pokemonHeight'>Height: {pokemonHeight}</p>
+                    <p className='pokemonWeight'>Weight: {pokemonWeight}</p>
+                    <p className='pokemonType'>Type: <PokemonCardIconImage pokemonType={pokemonType} /></p>
                     
                     
                 </div>
