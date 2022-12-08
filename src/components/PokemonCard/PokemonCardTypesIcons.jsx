@@ -41,8 +41,9 @@ const PokemonCardTypesIcons = {
     water:waterIcon
 }
 const pokemonCardIconImageStyle = {
-    width:"16px",
-    height:"16px"
+    width:"18px",
+    height:"18px",
+    marginLeft:"3px"
 }
 
 const PokemonCardIconImage = ({pokemonType}) => {
