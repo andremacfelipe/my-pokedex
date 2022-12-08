@@ -1,7 +1,7 @@
 import './style.css'
 
 import PokemonCardIconImage from './PokemonCardTypesIcons'
-
+import PokemonCardTypesColors,{PokemonCardTypesBackgroundColor} from './PokemonCardTypesColors'
 
 
 const PokemonCard = ({pokemon}) => {
@@ -10,8 +10,14 @@ const PokemonCard = ({pokemon}) => {
 
 
     return (
-        <article className='PokemonCard' >
-            <div className="pokemonCardPic">
+        <article className='PokemonCard' 
+        style={{
+            boxShadow:`5px 5px 10px ${PokemonCardTypesColors[pokemonType]}, -2px -2px 10px ${PokemonCardTypesColors[pokemonType]} `,
+            
+        }} >
+            <div className="pokemonCardPic" style={{
+                outline:`3px solid ${PokemonCardTypesBackgroundColor[pokemonType]}`
+            }}>
                 <img src={pokemonCardPicSrc} alt="okemonPic" />
             </div>
             <section className='pokemonCardInfo'>
