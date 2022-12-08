@@ -1,5 +1,14 @@
 import './style.css'
 
+import PokemonCardIconImage from './PokemonCardTypesIcons'
+
+
+
+
+
+
+
+
 
 const PokemonCard = ({pokemon}) => {
 
@@ -15,8 +24,8 @@ const PokemonCard = ({pokemon}) => {
                 <span className='pokemonName'>{pokemonName}</span>
                 <div className='pokemonStats' >
                     <p className='pokemonHeight'>Height:{pokemonHeight}</p>
+                    <p className='pokemonType'>Type:<PokemonCardIconImage pokemonType={pokemonType} /></p>
                     <p className='pokemonWeight'>Weight:{pokemonWeight}</p>
-                    <p className='pokemonType'>Type:{pokemonType}</p>
                     
                     
                 </div>
