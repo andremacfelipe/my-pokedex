@@ -6,17 +6,17 @@ import PokemonCardTypesColors,{PokemonCardTypesBackgroundColor} from './PokemonC
 
 const PokemonCard = ({pokemon}) => {
 
-    const {pokemonName, pokemonHeight,  pokemonWeight, pokemonType,pokemonCardPicSrc, } = pokemon
+    const {pokemonName, pokemonHeight,  pokemonWeight, pokemonType1,pokemonType2,pokemonCardPicSrc, } = pokemon
 
 
     return (
         <article className='PokemonCard' 
         style={{
-            boxShadow:`5px 5px 10px ${PokemonCardTypesColors[pokemonType]}, -2px -2px 10px ${PokemonCardTypesColors[pokemonType]} `,
+            boxShadow:`5px 5px 10px ${PokemonCardTypesColors[pokemonType1]}, -2px -2px 10px ${PokemonCardTypesColors[pokemonType1]} `,
             
         }} >
             <div className="pokemonCardPic" style={{
-                outline:`3px solid ${PokemonCardTypesBackgroundColor[pokemonType]}`
+                outline:`3px solid ${PokemonCardTypesBackgroundColor[pokemonType1]}`
             }}>
                 <img src={pokemonCardPicSrc} alt="okemonPic" />
             </div>
@@ -25,7 +25,13 @@ const PokemonCard = ({pokemon}) => {
                 <div className='pokemonStats' >
                     <p className='pokemonHeight'>Height: {pokemonHeight}</p>
                     <p className='pokemonWeight'>Weight: {pokemonWeight}</p>
-                    <p className='pokemonType'>Type: <PokemonCardIconImage pokemonType={pokemonType} /></p>
+                    <p className='pokemonType'>Types: {pokemonType2 ? <>
+                        <PokemonCardIconImage pokemonType={pokemonType1}/>
+                        <PokemonCardIconImage pokemonType={pokemonType2}/>
+                    </> : <>
+                    <PokemonCardIconImage pokemonType={pokemonType1}/>
+                    </>}
+                    </p>
                     
                     
                 </div>
