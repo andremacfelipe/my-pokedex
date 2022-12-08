@@ -4,12 +4,6 @@ import PokemonCardIconImage from './PokemonCardTypesIcons'
 
 
 
-
-
-
-
-
-
 const PokemonCard = ({pokemon}) => {
 
     const {pokemonName, pokemonHeight,  pokemonWeight, pokemonType,pokemonCardPicSrc, } = pokemon
