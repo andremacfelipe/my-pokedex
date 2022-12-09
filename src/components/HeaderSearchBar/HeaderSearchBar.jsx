@@ -6,7 +6,7 @@ const HeaderSearchBar = () => {
 
     return(
         <div className="HeaderSearchBar">
-            <input type="text" name="search" id="search" placeholder='Search a pokemon' />
+            <input type="search" name="search" id="search" placeholder='Search a pokemon' />
             <div className="searchIconBox">
                 <span className="material-symbols-outlined">
                     search

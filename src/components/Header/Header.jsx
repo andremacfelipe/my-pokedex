@@ -11,7 +11,7 @@ const Header = () => {
             
             <nav>
                 <img src={logo} alt="" className='Logo'/>
-                <HeaderSearchBar />
+                
                 <h1>TEMP CONTENT</h1>
             </nav>
         </header>

@@ -6,7 +6,7 @@ import PokemonCard from "../PokemonCard/PokemonCard"
 import Loading from "../Loading/Loading"
 import Container from '../Container/Container'
 import SideMenu from '../SideMenu/SideMenu'
-
+import Menu from '../Menu/Menu'
 
 import AllPokemonsContext from "../../contexts/AllPokemonsContext"
 
@@ -21,6 +21,7 @@ const Content = () => {
         <Container>
             <SideMenu />
             <main>
+                <Menu />
                 {slicedPokemonData?.map((pokemon) => {
                 return (
                     <PokemonCard 

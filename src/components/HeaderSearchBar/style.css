@@ -12,8 +12,9 @@
 .HeaderSearchBar:focus-within{
     /* outline:1px solid #f2d20042; */
     /* outline:2px solid #ee721a; */
-    background-color:rgba(255, 255, 255, 0.2);
+    outline:1px solid rgba(0, 0, 0, 0.2);
 }
+/*  */
 
 
 
@@ -41,7 +42,7 @@
 }
 
 .HeaderSearchBar .searchIconBox span{
-    color:white;
+    color:#000;
     font-size: 2rem;
 }
 

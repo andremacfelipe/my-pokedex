@@ -1,7 +1,7 @@
 main{
     overflow-y: auto;
     display:flex;
-    height: calc(73vh - 2px);
+    height: calc(93vh - 2px);
     /* flex-direction: column; */
     /* background-color: #e78f0124; */
     flex-wrap: wrap;

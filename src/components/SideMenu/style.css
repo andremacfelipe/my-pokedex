@@ -1,10 +1,14 @@
 .SideMenu{
-    background-color: aqua;
+    /* background-color: aqua; */
     /* position: fixed; */
     height: calc(100vh - 20vh);
     width: 20vw;
     flex-shrink: 0;
     /* top:35vh; */
     overflow-y: auto;
+    align-self: flex-end;
+    border:1px solid #000;
+    border-radius: 7px;
+    border-bottom: none;
     /* left: 0px; */
 }

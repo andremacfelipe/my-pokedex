@@ -1,11 +1,12 @@
 import './style.css'
 
+import HeaderSearchBar from '../HeaderSearchBar/HeaderSearchBar'
 
 
 const Menu = () => {
     return (
         <section className='Menu'>
-            <h1>MENU</h1>
+            <HeaderSearchBar />
         </section>
     )
 }
