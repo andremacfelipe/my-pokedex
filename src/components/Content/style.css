@@ -1,0 +1,13 @@
+main{
+    overflow-y: auto;
+    display:flex;
+    height: calc(73vh - 2px);
+    /* flex-direction: column; */
+    /* background-color: #e78f0124; */
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    padding:10px;
+    justify-content: space-evenly;
+    /* max-width: 900px; */
+    
+}

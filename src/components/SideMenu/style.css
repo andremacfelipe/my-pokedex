@@ -1,0 +1,10 @@
+.SideMenu{
+    background-color: aqua;
+    /* position: fixed; */
+    height: calc(100vh - 20vh);
+    width: 20vw;
+    flex-shrink: 0;
+    /* top:35vh; */
+    overflow-y: auto;
+    /* left: 0px; */
+}
