@@ -6,9 +6,9 @@
     flex-shrink: 0;
     /* top:35vh; */
     overflow-y: auto;
-    align-self: flex-end;
-    border:1px solid #000;
+    align-self: center;
+    border:1px solid #00000044;
     border-radius: 7px;
-    border-bottom: none;
+    /* border-bottom: none; */
     /* left: 0px; */
 }
