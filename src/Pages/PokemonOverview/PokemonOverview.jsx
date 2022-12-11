@@ -1,8 +1,10 @@
 import './style.css'
 
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { useParams } from "react-router-dom"
 import AllPokemonsContext from '../../contexts/AllPokemonsContext'
+
+
 
 import PokemonOverviewCard from '../../components/PokemonOverviewCard/PokemonOverviewCard'
 
@@ -16,7 +18,10 @@ const PokemonOverview = () => {
     const {slicedPokemonData} = useContext(AllPokemonsContext)
     const {pokemonName} = useParams()
 
-    const thisPokemonOverview = slicedPokemonData?.filter(pokemon => pokemon.pokemonName === pokemonName)
+    // const {pokemonNameData} = usePokemonName(pokemonName)
+
+    const thisPoke = slicedPokemonData?.filter((pokemon) => pokemon.pokemonName === pokemonName)
+
 
     
 
@@ -24,7 +29,15 @@ const PokemonOverview = () => {
 
     return (
         <main className="PokemonOverview">
-            <PokemonOverviewCard  />
+            {
+                thisPoke.length > 0 
+                ?
+                 <PokemonOverviewCard
+                    pokemon={thisPoke[0]}
+                    />
+                :
+                <p>Loading...</p>
+            }
         </main>
     )
 }
