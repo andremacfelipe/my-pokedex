@@ -1,8 +1,9 @@
+import Content from "../../components/Content/Content"
+
+
 const Home = () => {
     return(
-        <section className="Home">
-            
-        </section>
+        <Content />
     )
 
 }
