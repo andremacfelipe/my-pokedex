@@ -9,5 +9,7 @@ main{
     padding:10px;
     justify-content: space-evenly;
     /* max-width: 900px; */
+    min-width: 70vw;
+    max-width: 75vw;
     
 }

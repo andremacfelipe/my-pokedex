@@ -11,10 +11,11 @@ import Menu from '../Menu/Menu'
 import AllPokemonsContext from "../../contexts/AllPokemonsContext"
 
 
+/////////////////////////////////
 
 const Content = () => {
 
-    const {slicedPokemonData} = useContext(AllPokemonsContext)
+    const {slicedPokemonData,filteredPokemonsByName,searchPokemonByName} = useContext(AllPokemonsContext)
 
 
     return(
@@ -22,15 +23,31 @@ const Content = () => {
             <SideMenu />
             <main>
                 <Menu />
-                {slicedPokemonData?.map((pokemon) => {
-                return (
-                    <PokemonCard 
-                    pokemon={pokemon}
-                    key={pokemon.pokemonId} 
-                    
-                    />
-                )
-                })}
+                {
+                    searchPokemonByName.length > 0
+                    ?
+                    filteredPokemonsByName?.map((pokemon) => {
+                        return (
+                            <PokemonCard 
+                            pokemon={pokemon}
+                            key={pokemon.pokemonId} 
+                            
+                            />
+                        )
+                    })
+                    : 
+
+                    slicedPokemonData?.map((pokemon) => {
+                        return (
+                            <PokemonCard 
+                            pokemon={pokemon}
+                            key={pokemon.pokemonId} 
+                            
+                            />
+                        )
+                        })
+
+                }
             </main>
         </Container>
     )
