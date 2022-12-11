@@ -6,7 +6,7 @@ import AllPokemonsContext from '../../contexts/AllPokemonsContext'
 
 const HeaderSearchBar = () => {
 
-    const {slicedPokemonData,setSearchPokemonByName} = useContext(AllPokemonsContext)
+    const {setSearchPokemonByName} = useContext(AllPokemonsContext)
 
 
 

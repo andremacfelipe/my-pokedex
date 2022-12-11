@@ -1,6 +1,7 @@
 import './style.css'
 
 import { useContext } from "react"
+import { Link } from 'react-router-dom'
 
 import PokemonCard from "../PokemonCard/PokemonCard"
 import Loading from "../Loading/Loading"
@@ -28,22 +29,26 @@ const Content = () => {
                     ?
                     filteredPokemonsByName?.map((pokemon) => {
                         return (
-                            <PokemonCard 
-                            pokemon={pokemon}
-                            key={pokemon.pokemonId} 
-                            
-                            />
+                            <Link to={`/pokemon/${pokemon.pokemonName}`} key={pokemon.pokemonId} className="pokemonLink">
+                                <PokemonCard 
+                                pokemon={pokemon}
+                                key={pokemon.pokemonId} 
+                                
+                                />
+                            </Link>
                         )
                     })
                     : 
 
                     slicedPokemonData?.map((pokemon) => {
                         return (
-                            <PokemonCard 
-                            pokemon={pokemon}
-                            key={pokemon.pokemonId} 
-                            
-                            />
+                            <Link to={`/pokemon/${pokemon.pokemonName}`} key={pokemon.pokemonId} className="pokemonLink">
+                                <PokemonCard 
+                                pokemon={pokemon}
+                                key={pokemon.pokemonId} 
+                                
+                                />
+                            </Link>
                         )
                         })
 

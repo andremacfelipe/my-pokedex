@@ -13,3 +13,7 @@
     max-width: 75vw;
     
 }
+.HomeContent .pokemonLink{
+    text-decoration: none;
+    color:black;
+}

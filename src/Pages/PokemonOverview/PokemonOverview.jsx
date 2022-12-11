@@ -1,6 +1,6 @@
 import './style.css'
 
-import { useContext, useEffect } from 'react'
+import { useContext, } from 'react'
 import { useParams } from "react-router-dom"
 import AllPokemonsContext from '../../contexts/AllPokemonsContext'
 
