@@ -1,16 +1,23 @@
 import './style.css'
 
-import PokemonCardIconImage from './PokemonCardTypesIcons'
-import PokemonCardTypesColors,{PokemonCardTypesBackgroundColor} from './PokemonCardTypesColors'
 
+const PokemonOverviewCard = ({pokemon}) => {
+    
 
-const PokemonCard = ({pokemon}) => {
+    const {
+            pokemonName, pokemonHeight, 
+            pokemonWeight, pokemonType1,
+            pokemonType2,pokemonCardPicSrc,
+            pokemonBaseHp,
+            pokemonBaseAttack,
+            pokemonBaseDefense,
+            pokemonBaseSpeed,
+        } = pokemon
 
-    const {pokemonName, pokemonHeight,  pokemonWeight, pokemonType1,pokemonType2,pokemonCardPicSrc, } = pokemon
 
 
     return (
-        <article className='PokemonCard' 
+        <article className='PokemonOverviewCard' 
         style={{
             boxShadow:`5px 5px 10px ${PokemonCardTypesColors[pokemonType1]}, -2px -2px 10px ${PokemonCardTypesColors[pokemonType1]} `,
             
@@ -32,12 +39,19 @@ const PokemonCard = ({pokemon}) => {
                     <PokemonCardIconImage pokemonType={pokemonType1}/>
                     </>}
                     </p>
+                    <p className='pokemonBaseHp'>Base Hp</p>
+                    <p className='pokemonBaseAttack'>Base attack</p>
+                    <p className='pokemonBaseDefense'>Base Defense</p>
+                    <p className='pokemonBaseSpeed'> Base speed</p>
                     
                     
                 </div>
             </section>
         </article>
     )
+
 }
 
-export default PokemonCard
+
+
+export default PokemonOverviewCard

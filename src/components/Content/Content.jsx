@@ -21,7 +21,7 @@ const Content = () => {
     return(
         <Container>
             <SideMenu />
-            <main>
+            <main className='HomeContent'>
                 <Menu />
                 {
                     searchPokemonByName.length > 0
