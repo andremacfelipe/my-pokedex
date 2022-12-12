@@ -1,6 +1,12 @@
 import './style.css'
 import PokemonCard from '../PokemonCard/PokemonCard'
 
+import PokemonCardIconImage from '../PokemonCard/PokemonCardTypesIcons'
+import PokemonCardTypesColors, {PokemonCardTypesBackgroundColor} from '../PokemonCard/PokemonCardTypesColors'
+
+import { FootEmoji,HeartEmoji,ShieldEmoji,SwordEmoji } from '../Emojis/Emojis' 
+
+
 const PokemonOverviewCard = ({pokemon}) => {
     
 
@@ -12,13 +18,41 @@ const PokemonOverviewCard = ({pokemon}) => {
             pokemonBaseAttack,
             pokemonBaseDefense,
             pokemonBaseSpeed,
+            pokemonId
         } = pokemon
 
 
 
     return (
         
-        <PokemonCard pokemon={pokemon}/>
+        <article className='PokemonOverviewCard'>
+            <div className="pokemonIdBox">
+                <h2 className='pokemonId'>{`#${pokemonId}`}</h2>
+            </div>
+            <section className="pokemonPicAndNameBox">
+                <div className="pokemonPicBox">
+                    <img src={pokemonCardPicSrc} alt="pokemonCardPic" />
+                </div>
+                <div className="PokemonNameBox">
+                    <h1>{pokemonName}</h1>
+                </div>
+                
+
+            </section>
+
+            <div className="pokemonOverviewCardInfo">
+                
+                <div className="pokemonCombatStats">
+                    <h2 className='pokemonCombatStatsTitle'>Stats</h2>
+                    <p className='pokemonBaseHp'>HP<HeartEmoji />: {pokemonBaseHp}</p>
+                    <p className='pokemonBaseAttack'>ATTACK<SwordEmoji/>: {pokemonBaseAttack}</p>
+                    <p className='pokemonBaseDefense'>DEFENSE<ShieldEmoji/>: {pokemonBaseDefense}</p>
+                    <p className="pokemonBaseSpeed">SPEED<FootEmoji/>: {pokemonBaseSpeed}</p>
+                </div>
+                
+            </div>
+            
+        </article>
     )
 
 }

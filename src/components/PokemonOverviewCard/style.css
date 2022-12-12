@@ -1,61 +1,83 @@
 .PokemonOverviewCard{
+    width:95%;
+    height: calc(90vh - 10px);
+    background-color: white;
+    border-radius: 7px;
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 300px;
-    background-color: white;
+    align-items: center;
+    justify-content: space-between;
     box-shadow: 5px 5px 7px gray, -2px -2px 10px gray;
-    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.PokemonOverviewCard .pokemonIdBox{
+    display: flex;
+    width: 100%;
+    height: 20vh;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 3rem;
+}
+.PokemonOverviewCard .pokemonIdBox .pokemonId{
+    margin-right: 50px;
+}
+
+
+
+.PokemonOverviewCard .pokemonPicAndNameBox{
+    display: flex;
+    flex-direction: column;
+    /* background-color: aquamarine; */
+    width: 100%;
     align-items: center;
     justify-content: center;
-    /* font-family: 'Press Start 2P'; */
-    font-family: 'Turret Road';
-    position: relative;
-    margin-right:20px;
-    margin-bottom: 40px;
-    transition: .2s;
-    cursor:pointer;
-
+    text-transform: capitalize;
+    font-family: 'Press Start 2P';
 }
-.PokemonOverviewCard:hover{
-    width: 205px;
-    height: 305px;
-
-}
-
-.PokemonOverviewCard .pokemonCardPic{
-    width: 100px;
-    height: 100px;
-    /* background-color: aliceblue; */
-    outline: 3px solid aliceblue;
+.PokemonOverviewCard .pokemonPicAndNameBox .pokemonPicBox{
+    width:200px ;
+    height: 200px;
+    border: 3px solid black;
     border-radius: 50%;
+   margin-bottom:10px;
 }
-.PokemonOverviewCard .pokemonCardInfo{
-    display: flex;
-    margin-top: 5px;
-    flex-direction: column;
-    width: 100%;
-}
-.PokemonOverviewCard .pokemonCardInfo .pokemonName{
-    /* font-size: 12px; */
-    font-weight: 700;
-    text-align: center;
-}
-.PokemonOverviewCard  .pokemonStats{
-    /* font-family: 'Press Start 2P'; */
-    font-family: 'Turret Road';
-    font-size:16px;
-    font-weight: 500;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    /* margin-left:10px; */
-    /* margin-bottom:30px; */
+.PokemonOverviewCard .pokemonPicAndNameBox .pokemonPicBox img{
+    width: 200px;
     
 }
-.PokemonOverviewCard .pokemonStats p{
-    margin-bottom:6px;
+
+.PokemonOverviewCard .pokemonOverviewCardInfo{
+    display: flex;
+    width: 100%;
+    /* background-color: aqua; */
+    font-size: 2rem;
+    /* font-weight: bold; */
+    /* font-family: 'Press Start 2P'; */
+    /* justify-content: space-between; */
+    flex-grow:1;
 }
-.PokemonOverviewCard .pokemonCardInfo .pokemonStats .pokemonType{
+/* .PokemonOverviewCard .pokemonOverviewCardInfo .pokemonStatsContainer{
+    display: flex;
+    flex-direction: column;
+} */
+.PokemonOverviewCard .pokemonOverviewCardInfo .pokemonCombatStats p {
+    margin-bottom: 5px;
     display: flex;
 }
+
+.PokemonOverviewCard .pokemonOverviewCardInfo .pokemonCombatStats {
+    /* margin-left:100%; */
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+
+
+
+
+
+
