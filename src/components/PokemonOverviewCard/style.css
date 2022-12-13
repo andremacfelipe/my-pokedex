@@ -1,5 +1,6 @@
 .PokemonOverviewCard{
     width:80%;
+    min-width: 900px;
     height: calc(90vh - 10px);
     background-color: white;
     border-radius: 7px;
