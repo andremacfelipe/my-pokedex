@@ -13,10 +13,10 @@ const usePokemonEvolutions = (pokemonName) => {
         fetch(pokemonEvolutionsUrl)
         .then(res => res.json())
         .then(res => {
-            setPokemonEvolutions([{
-                evolution1:res.chain.evolves_to[0].species.name,
-                evolution2:res.chain.evolves_to[0].evolves_to[0].species.name
-            }]) 
+            setPokemonEvolutions([
+                res.chain.evolves_to[0].species.name,
+                res.chain.evolves_to[0].evolves_to[0].species.name
+            ]) 
         }).catch(err => {return })
 
 

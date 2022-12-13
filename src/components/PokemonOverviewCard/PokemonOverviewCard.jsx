@@ -1,5 +1,8 @@
 import './style.css'
+
 import PokemonCard from '../PokemonCard/PokemonCard'
+import PokemonEvolutionsBox from '../PokemonEvolutionsBox/PokemonEvolutionsBox'
+
 
 import PokemonCardIconImage from '../PokemonCard/PokemonCardTypesIcons'
 import PokemonCardTypesColors, {PokemonCardTypesBackgroundColor} from '../PokemonCard/PokemonCardTypesColors'
@@ -65,6 +68,8 @@ const PokemonOverviewCard = ({pokemon}) => {
                     
                 </div>
             </div>
+
+            <PokemonEvolutionsBox pokemonName={pokemonName} />
             
         </article>
     )
