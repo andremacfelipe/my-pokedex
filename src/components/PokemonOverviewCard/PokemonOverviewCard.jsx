@@ -67,9 +67,12 @@ const PokemonOverviewCard = ({pokemon}) => {
                     
                     
                 </div>
+                <PokemonEvolutionsBox pokemonName={pokemonName} />
+
+
             </div>
 
-            <PokemonEvolutionsBox pokemonName={pokemonName} />
+            
             
         </article>
     )
