@@ -15,10 +15,11 @@ const usePokemonEvolutionsUrl = (pokemonName) => {
         .then(res => res.json())
         .then(({evolution_chain}) => evolution_chain.url )
         .then(url => setPokemonEvolutionsUrl(url))
+        .catch(err => {return })
 
 
 
-    },[])
+    },[pokemonName])
 
 
     return {pokemonEvolutionsUrl}
