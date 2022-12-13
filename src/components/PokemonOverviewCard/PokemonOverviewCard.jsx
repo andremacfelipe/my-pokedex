@@ -49,7 +49,19 @@ const PokemonOverviewCard = ({pokemon}) => {
                     <p className='pokemonBaseDefense'>DEFENSE<ShieldEmoji/>: {pokemonBaseDefense}</p>
                     <p className="pokemonBaseSpeed">SPEED<FootEmoji/>: {pokemonBaseSpeed}</p>
                 </div>
-                
+                <div className='pokemonOtherStats' >
+                    <p className='pokemonHeight'>HEIGHT: {pokemonHeight}</p>
+                    <p className='pokemonWeight'>WEIGHT: {pokemonWeight}</p>
+                    <p className='pokemonType'>TYPES: {pokemonType2 ? <>
+                        <PokemonCardIconImage pokemonType={pokemonType1}/>
+                        <PokemonCardIconImage pokemonType={pokemonType2}/>
+                    </> : <>
+                    <PokemonCardIconImage pokemonType={pokemonType1}/>
+                    </>}
+                    </p>
+                    
+                    
+                </div>
             </div>
             
         </article>

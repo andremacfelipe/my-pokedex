@@ -51,13 +51,14 @@
 
 .PokemonOverviewCard .pokemonOverviewCardInfo{
     display: flex;
-    width: 100%;
+    width: 50%;
     /* background-color: aqua; */
     font-size: 2rem;
     /* font-weight: bold; */
     /* font-family: 'Press Start 2P'; */
     /* justify-content: space-between; */
-    flex-grow:1;
+    /* flex-grow:1; */
+    align-self: flex-start;
 }
 /* .PokemonOverviewCard .pokemonOverviewCardInfo .pokemonStatsContainer{
     display: flex;
@@ -67,14 +68,26 @@
     margin-bottom: 5px;
     display: flex;
 }
+.PokemonOverviewCard .pokemonOverviewCardInfo .pokemonCombatStats .pokemonCombatStatsTitle{
 
+    text-align: center;
+
+
+
+}
 .PokemonOverviewCard .pokemonOverviewCardInfo .pokemonCombatStats {
     /* margin-left:100%; */
     display: flex;
     flex-direction: column;
-    margin-right: 50px;
+    margin-right: 30px;
 }
-
+.PokemonOverviewCard .pokemonOverviewCardInfo .pokemonOtherStats{
+    /* background-color: red; */
+    margin-top:64px;
+}
+.PokemonOverviewCard .pokemonOverviewCardInfo .pokemonOtherStats p{
+    margin-bottom:5px;
+}
 
 
 
