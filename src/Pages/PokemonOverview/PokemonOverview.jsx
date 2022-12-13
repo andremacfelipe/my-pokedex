@@ -18,8 +18,6 @@ const PokemonOverview = () => {
     const {slicedPokemonData} = useContext(AllPokemonsContext)
     const {pokemonName} = useParams()
 
-    // const {pokemonNameData} = usePokemonName(pokemonName)
-
     const thisPoke = slicedPokemonData?.filter((pokemon) => pokemon.pokemonName === pokemonName)
 
 

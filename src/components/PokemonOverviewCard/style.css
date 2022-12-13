@@ -1,6 +1,6 @@
 .PokemonOverviewCard{
     width:80%;
-    min-width: 900px;
+    min-width: 920px;
     height: calc(90vh - 10px);
     background-color: white;
     border-radius: 7px;
@@ -92,6 +92,7 @@
 .PokemonOverviewCard .pokemonOverviewCardInfo .pokemonOtherStats p{
     margin-bottom:5px;
 }
+
 .PokemonOverviewCard .pokemonOverviewCardInfo .PokemonEvolutionsBox{
     display: flex;
     flex-direction: column;
@@ -121,6 +122,7 @@
     display: flex;
     margin-right: 10px;
 }
+
 
 
 

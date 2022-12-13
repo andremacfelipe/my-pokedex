@@ -46,12 +46,15 @@ const pokemonCardIconImageStyle = {
     marginLeft:"3px"
 }
 
-const PokemonCardIconImage = ({pokemonType}) => {
+const PokemonCardIconImage = ({pokemonType,customStyle}) => {
+
+
     return (
         <img src={PokemonCardTypesIcons[pokemonType]} 
         alt={pokemonType} 
-        style={pokemonCardIconImageStyle} 
+        style={customStyle ? customStyle : pokemonCardIconImageStyle} 
         title={pokemonType}
+        className="PokemonCardIconImage"
         />
     )
 }

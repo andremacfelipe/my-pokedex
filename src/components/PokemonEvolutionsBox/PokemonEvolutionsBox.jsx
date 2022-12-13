@@ -1,8 +1,7 @@
 import './style.css'
 import usePokemonEvolutions from '../../services/Hooks/usePokemonEvolutions/usePokemonEvolutions'
-import { useContext, useEffect, useState } from 'react'
+import { useContext, } from 'react'
 import AllPokemonsContext from '../../contexts/AllPokemonsContext'
-import PokemonCard from '../PokemonCard/PokemonCard'
 import { Link } from 'react-router-dom'
 import PokemonCardPic from '../PokemonCardPic/PokemonCardPic'
 import { PokemonCardTypesBackgroundColor } from '../PokemonCard/PokemonCardTypesColors'
@@ -16,12 +15,6 @@ const PokemonEvolutionsBox = ({pokemonName}) => {
         pokemon.pokemonName ===pokemonEvolutions[1] || pokemon.pokemonName ===pokemonEvolutions[2])
         
         :[]
-        
-
-
-    useEffect(() => {
-        console.log(evolutionPokes)
-    },[pokemonEvolutions])
 
 
     return (
@@ -30,12 +23,15 @@ const PokemonEvolutionsBox = ({pokemonName}) => {
             <div className="pokemonEvolutionsBoxCardPicContainer">
                 {   
                     evolutionPokes.length > 0 
-                    ? evolutionPokes.map((pokemon) => <PokemonCardPic 
-                        pokemonCardPicSrc={pokemon.pokemonCardPicSrc}
-                        pokemonType1={pokemon.pokemonType1}
-                        PokemonCardTypesBackgroundColor={PokemonCardTypesBackgroundColor}
-                        key={pokemon.pokemonId}
-                    />)
+                    ? evolutionPokes.map((pokemon) => (<Link key={pokemon.pokemonId}
+                    to={`/pokemon/${pokemon.pokemonName}`}>
+                        <PokemonCardPic 
+                            pokemonCardPicSrc={pokemon.pokemonCardPicSrc}
+                            pokemonType1={pokemon.pokemonType1}
+                            PokemonCardTypesBackgroundColor={PokemonCardTypesBackgroundColor}
+                        
+                        />
+                    </Link>))
                     : <p>Loading...</p> 
                 
                 }

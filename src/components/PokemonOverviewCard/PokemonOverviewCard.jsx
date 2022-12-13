@@ -1,11 +1,11 @@
 import './style.css'
 
-import PokemonCard from '../PokemonCard/PokemonCard'
+
 import PokemonEvolutionsBox from '../PokemonEvolutionsBox/PokemonEvolutionsBox'
 
 
 import PokemonCardIconImage from '../PokemonCard/PokemonCardTypesIcons'
-import PokemonCardTypesColors, {PokemonCardTypesBackgroundColor} from '../PokemonCard/PokemonCardTypesColors'
+import {PokemonCardTypesBackgroundColor} from '../PokemonCard/PokemonCardTypesColors'
 
 import { FootEmoji,HeartEmoji,ShieldEmoji,SwordEmoji } from '../Emojis/Emojis' 
 
@@ -58,10 +58,22 @@ const PokemonOverviewCard = ({pokemon}) => {
                     <p className='pokemonHeight'>HEIGHT: {pokemonHeight}</p>
                     <p className='pokemonWeight'>WEIGHT: {pokemonWeight}</p>
                     <p className='pokemonType'>TYPES: {pokemonType2 ? <>
-                        <PokemonCardIconImage pokemonType={pokemonType1}/>
-                        <PokemonCardIconImage pokemonType={pokemonType2}/>
+                        <PokemonCardIconImage pokemonType={pokemonType1} customStyle={{
+                            width:"28px",
+                            height:"28px",
+                            marginLeft:"3px",
+                        }}/>
+                        <PokemonCardIconImage pokemonType={pokemonType2} customStyle={{
+                            width:"28px",
+                            height:"28px",
+                            marginLeft:"3px",
+                        }}/>
                     </> : <>
-                    <PokemonCardIconImage pokemonType={pokemonType1}/>
+                    <PokemonCardIconImage pokemonType={pokemonType1} customStyle={{
+                            width:"28px",
+                            height:"28px",
+                            marginLeft:"3px",
+                        }}/>
                     </>}
                     </p>
                     
