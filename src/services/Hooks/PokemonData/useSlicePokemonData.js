@@ -28,7 +28,8 @@ const useSlicePokemonData = () => {
                             pokemonBaseHp:thisPokemonData.stats[0].base_stat,
                             pokemonBaseAttack:thisPokemonData.stats[1].base_stat,
                             pokemonBaseDefense:thisPokemonData.stats[2].base_stat,
-                            pokemonBaseSpeed:thisPokemonData.stats[5].base_stat         
+                            pokemonBaseSpeed:thisPokemonData.stats[5].base_stat,
+                                 
 
 
                         }])
