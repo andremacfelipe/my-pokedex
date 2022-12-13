@@ -13,7 +13,7 @@ const PokemonEvolutionsBox = ({pokemonName}) => {
     const {slicedPokemonData} = useContext(AllPokemonsContext)
     const evolutionPokes = pokemonEvolutions.length > 0 && slicedPokemonData.length > 0 
         ? slicedPokemonData.filter((pokemon) => pokemon.pokemonName === pokemonEvolutions[0] || 
-        pokemon.pokemonName ===pokemonEvolutions[1])
+        pokemon.pokemonName ===pokemonEvolutions[1] || pokemon.pokemonName ===pokemonEvolutions[2])
         
         :[]
         
