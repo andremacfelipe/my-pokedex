@@ -30,7 +30,9 @@ const PokemonOverviewCard = ({pokemon}) => {
                 <h2 className='pokemonId'>{`#${pokemonId}`}</h2>
             </div>
             <section className="pokemonPicAndNameBox">
-                <div className="pokemonPicBox">
+                <div className="pokemonPicBox" style={{
+                outline:`5px solid ${PokemonCardTypesBackgroundColor[pokemonType1]}`
+            }}>
                     <img src={pokemonCardPicSrc} alt="pokemonCardPic" />
                 </div>
                 <div className="PokemonNameBox">
