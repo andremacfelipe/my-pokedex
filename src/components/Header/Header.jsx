@@ -1,7 +1,8 @@
 import './style.css'
 import logo from '../../assets/appLogo2.png'
 
-import { Outlet } from 'react-router-dom'
+import { Outlet,Link } from 'react-router-dom'
+
 
 
 const Header = () => {
@@ -12,7 +13,9 @@ const Header = () => {
                 
                 
                 <nav>
-                    <img src={logo} alt="" className='Logo'/>
+                    <Link to="/">
+                        <img src={logo} alt="" className='Logo'/>
+                    </Link>
                     
                     <h1>TEMP CONTENT</h1>
                 </nav>
