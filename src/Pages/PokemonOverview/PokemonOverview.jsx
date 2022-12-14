@@ -7,6 +7,8 @@ import AllPokemonsContext from '../../contexts/AllPokemonsContext'
 
 
 import PokemonOverviewCard from '../../components/PokemonOverviewCard/PokemonOverviewCard'
+import NextButton from '../../components/NextButton/NextButton'
+import PreviousButton from '../../components/PreviousButton/PreviousButton'
 
 
 
@@ -27,6 +29,8 @@ const PokemonOverview = () => {
 
     return (
         <main className="PokemonOverview">
+            <NextButton />
+            <PreviousButton />
             {
                 thisPoke.length > 0 
                 ?
