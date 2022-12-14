@@ -10,7 +10,7 @@
     position:relative;
 }
 .PokemonOverview .material-symbols-outlined{
-    position:absolute;
+    position:fixed;
     font-size:5rem;
     border:2px solid #333;
     color:#333;
@@ -25,7 +25,12 @@
 
 .PokemonOverview #NextButton{
     right: 2%;
+    top:50%;
+    transform: translateY(-50%);
 }
 .PokemonOverview #PreviousButton{
     left:2%;
+    top:50%;
+    transform: translateY(-40%);
 }
+

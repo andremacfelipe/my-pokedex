@@ -1,9 +1,9 @@
 import './style.css'
 
-import { useContext, } from 'react'
+import { useContext, useEffect, } from 'react'
 import { useParams } from "react-router-dom"
 import AllPokemonsContext from '../../contexts/AllPokemonsContext'
-
+import { Link } from 'react-router-dom'
 
 
 import PokemonOverviewCard from '../../components/PokemonOverviewCard/PokemonOverviewCard'
@@ -22,6 +22,14 @@ const PokemonOverview = () => {
 
     const thisPoke = slicedPokemonData?.filter((pokemon) => pokemon.pokemonName === pokemonName)
 
+    const nextPoke = slicedPokemonData?.filter((pokemon) => {
+        return (Number(pokemon?.pokemonId) === (Number(thisPoke[0]?.pokemonId) + 1)) 
+        
+        
+    })
+    const previousPoke = slicedPokemonData?.filter((pokemon) => {
+        return (Number(pokemon?.pokemonId) === (Number(thisPoke[0]?.pokemonId) - 1))
+    })
 
     
 
@@ -29,8 +37,12 @@ const PokemonOverview = () => {
 
     return (
         <main className="PokemonOverview">
-            <NextButton />
-            <PreviousButton />
+            <Link to={`/pokemon/${nextPoke[0]?.pokemonName}`} className="nextPokemonLink">
+                <NextButton />
+            </Link>
+            <Link to={`/pokemon/${previousPoke[0]?.pokemonName}`} className="previousPokemonLink">
+                <PreviousButton />
+            </Link>
             {
                 thisPoke.length > 0 
                 ?
