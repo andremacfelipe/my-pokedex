@@ -12,11 +12,11 @@ import Menu from '../Menu/Menu'
 import AllPokemonsContext from "../../contexts/AllPokemonsContext"
 
 
-/////////////////////////////////
+//
 
 const Content = () => {
 
-    const {slicedPokemonData,filteredPokemonsByName,searchPokemonByName} = useContext(AllPokemonsContext)
+    const {filteredPokemonsByName,searchPokemonByName,showPokemons} = useContext(AllPokemonsContext)
 
 
     return(
@@ -40,7 +40,7 @@ const Content = () => {
                     })
                     : 
 
-                    slicedPokemonData?.map((pokemon) => {
+                    showPokemons?.map((pokemon) => {
                         return (
                             <Link to={`/pokemon/${pokemon.pokemonName}`} key={pokemon.pokemonId} className="pokemonLink">
                                 <PokemonCard 

@@ -13,10 +13,24 @@ export const AllPokemonsProvider = ({children}) => {
 
     const {slicedPokemonData} = useSlicePokemonData()
     const [searchPokemonByName,setSearchPokemonByName] = useState('')
+    const [searchPokemonsByType,setSearchPokemonsByType] = useState('')
+
+
+
+    const showPokemons = !!searchPokemonsByType
+        ? slicedPokemonData.filter((pokemon) => {
+            return pokemon.pokemonType1 === searchPokemonsByType || pokemon.pokemonType2 === searchPokemonsByType
+        }) 
+        : [...slicedPokemonData] 
+
+
+
 
     const filteredPokemonsByName = searchPokemonByName.length > 0 
-        ? slicedPokemonData.filter((pokemon) => pokemon.pokemonName.includes(searchPokemonByName))
+        ? showPokemons.filter((pokemon) => pokemon.pokemonName.includes(searchPokemonByName))
         : []
+    
+    
 
 
 
@@ -28,7 +42,10 @@ export const AllPokemonsProvider = ({children}) => {
             slicedPokemonData,
             searchPokemonByName,
             setSearchPokemonByName,
-            filteredPokemonsByName
+            filteredPokemonsByName,
+            showPokemons,
+            searchPokemonsByType,
+            setSearchPokemonsByType
         }}>
             {children}
         </AllPokemonsContext.Provider>

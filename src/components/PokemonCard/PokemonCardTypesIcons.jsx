@@ -46,7 +46,7 @@ const pokemonCardIconImageStyle = {
     marginLeft:"3px"
 }
 
-const PokemonCardIconImage = ({pokemonType,customStyle}) => {
+const PokemonCardIconImage = ({pokemonType,customStyle,onClick}) => {
 
 
     return (
@@ -54,6 +54,7 @@ const PokemonCardIconImage = ({pokemonType,customStyle}) => {
         alt={pokemonType} 
         style={customStyle ? customStyle : pokemonCardIconImageStyle} 
         title={pokemonType}
+        onClick={onClick ? onClick : null}
         className="PokemonCardIconImage"
         />
     )
