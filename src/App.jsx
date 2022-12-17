@@ -24,8 +24,6 @@ function App() {
               <Route path='pokemon/:pokemonName' element={<PokemonOverview/>} />
               <Route path="pokemons/:pokemonType" element={<Home/>}  />
             </Route>
-
-            
           </Routes>
         </Router>
       </AllPokemonsProvider>
