@@ -37,12 +37,22 @@ const PokemonOverview = () => {
 
     return (
         <main className="PokemonOverview">
-            <Link to={`/pokemon/${nextPoke[0]?.pokemonName}`} className="nextPokemonLink">
-                <NextButton />
-            </Link>
-            <Link to={`/pokemon/${previousPoke[0]?.pokemonName}`} className="previousPokemonLink">
-                <PreviousButton />
-            </Link>
+            {
+                !!nextPoke[0] ? 
+                <Link to={`/pokemon/${nextPoke[0]?.pokemonName}`} className="nextPokemonLink">
+                    <NextButton />
+                </Link>
+                : 
+                <div></div>
+            }
+            {
+                !!previousPoke[0] ? 
+                <Link to={`/pokemon/${previousPoke[0]?.pokemonName}`} className="previousPokemonLink">
+                    <PreviousButton />
+                </Link>
+                :
+                <div></div>
+            }
             {
                 thisPoke.length > 0 
                 ?

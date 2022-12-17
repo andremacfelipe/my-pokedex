@@ -18,7 +18,7 @@ const usePokemonEvolutions = (pokemonName) => {
                 res?.chain?.evolves_to[0]?.species.name,
                 res?.chain.evolves_to[0]?.evolves_to[0]?.species.name
             ]) 
-        }).catch(err => {console.error(err) })
+        }).catch(err => {return })
 
 
 
