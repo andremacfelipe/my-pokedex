@@ -22,7 +22,6 @@ function App() {
             <Route path='/' element={<Header/>}>
               <Route index element={ <Home/> } />
               <Route path='pokemon/:pokemonName' element={<PokemonOverview/>} />
-              <Route path="pokemons/:pokemonType" element={<Home/>}  />
             </Route>
           </Routes>
         </Router>
