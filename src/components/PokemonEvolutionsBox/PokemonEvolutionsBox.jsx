@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom'
 import PokemonCardPic from '../PokemonCardPic/PokemonCardPic'
 import { PokemonCardTypesBackgroundColor } from '../PokemonCard/PokemonCardTypesColors'
 
+
+import Loading from '../Loading/Loading'
+
 const PokemonEvolutionsBox = ({pokemonName}) => {
 
     const {pokemonEvolutions} = usePokemonEvolutions(pokemonName)
@@ -32,7 +35,7 @@ const PokemonEvolutionsBox = ({pokemonName}) => {
                         
                         />
                     </Link>))
-                    : <p>Loading...</p> 
+                    : <Loading /> 
                 
                 }
             </div>

@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 import PokemonOverviewCard from '../../components/PokemonOverviewCard/PokemonOverviewCard'
 import NextButton from '../../components/NextButton/NextButton'
 import PreviousButton from '../../components/PreviousButton/PreviousButton'
+import Loading from '../../components/Loading/Loading'
 
 
 
@@ -60,7 +61,7 @@ const PokemonOverview = () => {
                     pokemon={thisPoke[0]}
                     />
                 :
-                <p>Loading...</p>
+                <Loading />
             }
         </main>
     )
