@@ -17,7 +17,7 @@ const Header = () => {
                         <img src={logo} alt="" className='Logo'/>
                     </Link>
                     
-                    <h1>TEMP CONTENT</h1>
+                    
                 </nav>
             </header>
             <Outlet />
