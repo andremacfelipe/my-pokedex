@@ -3,7 +3,7 @@ import { useEffect,useState } from "react"
 
 const useAllPokemonsUrl = () => {
 
-    const FETCH_POKEMON_URL = "https://pokeapi.co/api/v2/pokemon/?limit=50&offset=0"
+    const FETCH_POKEMON_URL = "https://pokeapi.co/api/v2/pokemon/?limit=205&offset=0"
     const [allPokemonsUrl,setAllPokemonsUrl] = useState([])
 
     useEffect(() => {
