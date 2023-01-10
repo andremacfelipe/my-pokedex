@@ -1,4 +1,7 @@
 # My pokedex using pokeAPI
+![image](https://user-images.githubusercontent.com/68085679/211576856-4911830d-ff2e-495d-b690-48303f0b75f1.png)
+![image](https://user-images.githubusercontent.com/68085679/211577379-8256a3eb-a903-4350-9130-1f34ba24f9fa.png)
+
 
 >### This is a pokedex written by me just to pratice my reactJS skills.
 
